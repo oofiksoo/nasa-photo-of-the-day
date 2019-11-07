@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .App-logo {
@@ -24,14 +26,47 @@
 }
 
 .apod-img {
-    width: 50%;
-    height: 50%;
+    display: flex;
+    width: 100%;
+    height: 75%;
 }
 
 .apod-card {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     height: 40%;
     padding: 4%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2%;
+}
+
+button {
+    border-radius: 20px;
+    color: white;
+    margin: .5%;
+    padding: 2%;
+}
+
+.todaybtn {
+    background-color: blue;
+}
+
+.yesterdaybtn {
+    background-color: green;
+}
+
+.twodaysbtn {
+    background-color: yellow;
+    color: black;
+}
+
+.controls {
+    display: flex;
 }
 
 @keyframes App-logo-spin {

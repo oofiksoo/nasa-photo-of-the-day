@@ -7,7 +7,7 @@ export default function ApiHandler() {
     const [date, setDate] = useState("2019-09-25")
   
     useEffect(() => {
-      axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
+      axios.get(`https://api.nasa.gov/planetary/apod?api_key=dR5Qr9DwHL4cbG1kCUzI5LxCAaC7vgc8SR291XUJ&date=${date}`)
       .then(response => {
         console.log(response)
         setApi(response.data)
@@ -17,14 +17,15 @@ export default function ApiHandler() {
       })
     },[date])
     return (
+        <div>
       <div className="container">
-        <button onClick ={() => setDate('')}>Today</button> 
-        <button onClick ={() => setDate('2019-05-11')}>Yesterday</button>
-        <button onClick ={() => setDate('2019-04-11')}>2 Days Ago</button>
-        <div className="entry">
         <Apod title={api.title} url={api.url} date={api.date} explanation={api.explanation}/>
-            </div>               
+        <div className="controls">
+        <button className="todaybtn" onClick ={() => setDate('')}>Today</button> 
+        <button className="yesterdaybtn" onClick ={() => setDate('2019-05-11')}>Yesterday</button>
+        <button className="twodaysbtn" onClick ={() => setDate('2019-04-11')}>2 Days Ago</button>   
+        </div>              
        </div>
-      
+      </div>
     );
   }
