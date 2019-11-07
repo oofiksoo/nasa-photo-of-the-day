@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Apod from "./apod";
 import axios from "axios"
+import { Button, ButtonGroup } from 'reactstrap';
 
 export default function ApiHandler() {
     const [api, setApi] = useState([])
@@ -17,15 +18,13 @@ export default function ApiHandler() {
       })
     },[date])
     return (
-        <div>
       <div className="container">
-        <Apod title={api.title} url={api.url} date={api.date} explanation={api.explanation}/>
-        <div className="controls">
-        <button className="todaybtn" onClick ={() => setDate('')}>Today</button> 
-        <button className="yesterdaybtn" onClick ={() => setDate('2019-05-11')}>Yesterday</button>
-        <button className="twodaysbtn" onClick ={() => setDate('2019-04-11')}>2 Days Ago</button>   
-        </div>              
+       <ButtonGroup>
+      <Button onClick ={() => setDate('2019-06-11')}>Yesterday</Button>
+      <Button onClick ={() => setDate('')}>Today</Button>
+      <Button onClick ={() => setDate('2019-05-11')}>2 Days Ago</Button>
+      </ButtonGroup>
+       <Apod title={api.title} url={api.url} date={api.date} explanation={api.explanation}/>              
        </div>
-      </div>
     );
   }

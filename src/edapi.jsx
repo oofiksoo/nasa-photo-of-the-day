@@ -19,7 +19,7 @@ export default function Edapi() {
     return (
       <div>
       <div className="container">
-         {edapi.map((ed, index) => {return <Mrp key={index} title={edapi.earth_date} url={edapi.img_src} date={edapi.earth_date} full_name={edapi.earth_date}/>})}
+         {edapi.map((ed, index) => {return <Mrp key={index} title={ed.earth_date} url={ed.img_src} date={ed.earth_date} full_name={ed.earth_date}/>})}
     </div>
     <div className="controls">
     <button className="todaybtn" onClick ={() => setEarthDate('2019-07-11')}>Today</button> 
