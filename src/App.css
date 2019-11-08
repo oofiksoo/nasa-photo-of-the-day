@@ -25,27 +25,37 @@
     color: #61dafb;
 }
 
+.App-dash {
+    display: flex;
+}
+
 .apod-img {
     display: flex;
     margin: auto;
-    width: 75%;
-    height: 50vh;
+    width: 90%;
+    height: 25vh;
 }
 
 .apod {
-    width: 85%;
-    padding: 4%;
+    width: 90%;
+    padding: 1%;
+}
+
+.mrp {
+    width: 90%;
+    padding: 1%;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2%;
+    margin: 1%;
 }
 
 .ButtonGroup {
-    width: 50%
+    width: 50%;
+    margin: 1%;
 }
 
 .Button {

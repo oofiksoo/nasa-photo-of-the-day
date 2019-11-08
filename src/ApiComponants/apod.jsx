@@ -6,10 +6,10 @@ const toggle = () => setIsOpen(!isOpen);
   return (
     <div className="apod">
         <Jumbotron>
-        <h1 className="display-3">{props.title}</h1>
-        <p className="lead">{props.date}</p>
+        <h1 className="display-3">{props.date}</h1>
+        <p className="lead">{props.title}</p>
         <img className="apod-img" alt="NASA" src={props.url}/>
-        <hr className="my-2" />
+        <hr className="my-2"/>
         <div>
         <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Learn More</Button>
         <Collapse isOpen={isOpen}>
