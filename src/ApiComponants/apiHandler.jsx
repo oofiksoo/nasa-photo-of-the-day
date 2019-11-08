@@ -19,6 +19,7 @@ export default function ApiHandler() {
     },[date])
     return (
       <div className="container">
+        <h1>NASA APOD:</h1>
        <ButtonGroup>
       <Button onClick ={() => setDate('2019-06-11')}>Yesterday</Button>
       <Button onClick ={() => setDate('2019-10-31')}>Last Week</Button>

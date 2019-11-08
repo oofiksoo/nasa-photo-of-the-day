@@ -12,21 +12,24 @@ function App() {
     flex-direction: column;
     align-items: center;
     margin:2%;
+    border:1px dashed skyblue;
+    border-radius:20px;
   `;
     return ( < div className = "App" >
         <
+        h1 > NASA API 's:</h1> <
         div className = "App-dash" >
         <
         AppCard >
         <
         ApiHandler / >
         <
-        /AppCard> <
+        /AppCard>  <
         AppCard >
         <
         Edapi / >
         <
-        /AppCard> < /
+        /AppCard>  < /
         div > <
         /div>
     );
